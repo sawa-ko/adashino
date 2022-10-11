@@ -1,23 +1,41 @@
 {
-  "name": "main",
-  "description": "A @biscuitland/core framework?",
-  "type": "module",
-  "private": true,
-  "sideEffects": false,
-  "author": "@kaname-png",
-  "license": "MIT",
-  "keywords": [
-    "discord",
-    "biscuit",
-    "framework discord"
-  ],
-  "devDependencies": {
-    "@sapphire/eslint-config": "^4.3.8",
-    "@sapphire/ts-config": "^3.3.4",
-    "eslint": "^8.25.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.8.4"
-  }
+	"name": "main",
+	"description": "A @biscuitland/core framework?",
+	"type": "module",
+	"private": true,
+	"sideEffects": false,
+	"author": "@kaname-png",
+	"license": "MIT",
+	"scripts": {
+		"lint": "eslint",
+		"prettier": "prettier --write packages/**/*.{tsx,ts,css} --no-error-on-unmatched-pattern",
+		"update:i": "pnpm up --interactive",
+		"update:f": "pnpm up --latest",
+		"commit": "git-cz",
+		"prepare": "husky install .husky"
+	},
+	"keywords": [
+		"discord",
+		"biscuit",
+		"framework discord",
+		"bot"
+	],
+	"devDependencies": {
+		"@commitlint/cli": "^17.1.2",
+		"@commitlint/config-conventional": "^17.1.0",
+		"@commitlint/format": "^17.0.0",
+		"@sapphire/eslint-config": "^4.3.8",
+		"@sapphire/ts-config": "^3.3.4",
+		"@types/node": "^18.8.4",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.25.0",
+		"eslint-config-prettier": "^8.5.0",
+		"git-cz": "^4.9.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"pretty-quick": "^3.1.3",
+		"tslib": "^2.4.0",
+		"typescript": "^4.8.4"
+	}
 }
