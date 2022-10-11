@@ -1,16 +1,36 @@
 {
-	"name": "core",
-	"version": "1.0.0",
-	"description": "Core for running the framework to create bots for discorc with @biscuitland/core.Core for running the framework to create bots for discorc with @biscuitland/core.",
-	"main": "dist/index.js",
-	"author": "@kaname-png",
-	"license": "MIT",
-	"type": "module",
-	"private": true,
-	"keywords": [
-		"framework",
-		"biscuitland",
-		"discord",
-		"bot"
-	]
+  "name": "core",
+  "version": "1.0.0",
+  "description": "Core for running the framework to create bots for discorc with @biscuitland/core.Core for running the framework to create bots for discorc with @biscuitland/core.",
+  "main": "./lib/index.js",
+  "author": "@kaname-png",
+  "license": "MIT",
+  "type": "module",
+  "types": "./dts/index.d.ts",
+  "private": true,
+  "repository": "https://github.com/kaname-png/adashino/tree/main/packages/core",
+  "homepage": "https://github.com/kaname-png/adashino",
+  "keywords": [
+    "framework",
+    "biscuitland",
+    "discord",
+    "bot"
+  ],
+  "packemon": {
+    "format": "lib",
+    "platform": "node",
+    "support": "experimental"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.5.0"
+  },
+  "files": [
+    "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ]
 }

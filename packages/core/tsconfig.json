@@ -5,6 +5,8 @@
   ],
   "references": [],
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dts",
+    "declaration": true,
+    "declarationDir": "dts"
   }
 }

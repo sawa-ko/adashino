@@ -50,11 +50,13 @@ tasks:
 
   build:
     command:
-      - tsc
+      - packemon
 
     args:
-      - --build
-      - --verbose
+      - build
+      - --addFiles
+      - --addEngines
+      - --declaration
 
     deps:
       - ^:lint
@@ -67,6 +69,33 @@ tasks:
       - "@globs(sources)"
 
     outputs:
-      - dist
+      - lib
+      - dts
+
+    type: "node"
+
+  release:
+    command:
+      - packemon
+
+    args:
+      - pack
+      - --addFiles
+      - --addEngines
+      - --declaration
+
+    deps:
+      - ^:lint
+      - ^:prettier
+
+    env:
+      NODE_ENV: "production"
+
+    inputs:
+      - "@globs(sources)"
+
+    outputs:
+      - lib
+      - dts
 
     type: "node"

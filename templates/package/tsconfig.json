@@ -1,10 +1,10 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": [
-    "**/*"
-  ],
-  "references": [],
-  "compilerOptions": {
-    "outDir": "dist"
-  }
+	"extends": "../../tsconfig.base.json",
+	"include": ["**/*"],
+	"references": [],
+	"compilerOptions": {
+		"outDir": "dts",
+		"declaration": true,
+		"declarationDir": "dts"
+	}
 }

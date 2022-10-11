@@ -2,15 +2,35 @@
 	"name": "{{ name | kebab_case }}",
 	"version": "{{ version }}",
 	"description": "{{ description }}",
-	"main": "dist/index.js",
+	"main": "./lib/index.js",
+	"types": "./dts/index.d.ts",
 	"author": "@kaname-png",
 	"license": "MIT",
 	"type": "module",
 	"private": true,
+	"repository": "https://github.com/kaname-png/adashino/tree/main/packages/{{ name | kebab_case }}",
+	"homepage": "https://github.com/kaname-png/adashino",
 	"keywords": [
 		"framework",
 		"biscuitland",
 		"discord",
 		"bot"
+	],
+	"packemon": {
+		"format": "lib",
+		"platform": "node",
+		"support": "experimental"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=8.5.0"
+	},
+	"files": [
+		"dts/**/*.d.ts",
+		"lib/**/*.{js,map}",
+		"src/**/*.{ts,tsx,json}"
 	]
 }
