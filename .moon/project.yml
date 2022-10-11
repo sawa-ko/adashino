@@ -1,0 +1,70 @@
+# https://moonrepo.dev/docs/config/global-project
+$schema: "https://moonrepo.dev/schemas/global-project.json"
+
+fileGroups:
+  sources:
+    - src/**/*
+    - tsconfig.json
+    - /tsconfig.*.json
+    - /tsconfig.json"
+
+tasks:
+  lint:
+    command:
+      - eslint
+
+    args:
+      - --no-error-on-unmatched-pattern
+      - "."
+
+    deps: []
+
+    env:
+      NODE_ENV: "production"
+
+    inputs:
+      - "@globs(sources)"
+
+    type: "node"
+
+  prettier:
+    command:
+      - prettier
+
+    args:
+      - --check
+      - "."
+
+    deps:
+      - ^:lint
+
+    env:
+      NODE_ENV: "production"
+
+    inputs:
+      - "@globs(sources)"
+
+    type: "node"
+
+  build:
+    command:
+      - tsc
+
+    args:
+      - --build
+      - --verbose
+
+    deps:
+      - ^:lint
+      - ^:prettier
+
+    env:
+      NODE_ENV: "production"
+
+    inputs:
+      - "@globs(sources)"
+
+    outputs:
+      - dist
+
+    type: "node"

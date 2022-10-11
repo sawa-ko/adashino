@@ -1,0 +1,16 @@
+{
+	"name": "core",
+	"version": "1.0.0",
+	"description": "Core for running the framework to create bots for discorc with @biscuitland/core.Core for running the framework to create bots for discorc with @biscuitland/core.",
+	"main": "dist/index.js",
+	"author": "@kaname-png",
+	"license": "MIT",
+	"type": "module",
+	"private": true,
+	"keywords": [
+		"framework",
+		"biscuitland",
+		"discord",
+		"bot"
+	]
+}

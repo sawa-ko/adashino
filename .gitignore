@@ -1,3 +1,9 @@
 # Package manager
 node_modules
 
+# Moon
+.moon/cache
+.moon/docker
+
+# Builds
+**/dist

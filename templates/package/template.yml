@@ -1,0 +1,25 @@
+# https://moonrepo.dev/docs/config/template
+$schema: "https://moonrepo.dev/schemas/template.json"
+
+title: "Package"
+
+description: "Oh, you have discovered that you have to create a new package, it's time to suffer?"
+
+variables:
+  name:
+    type: "string"
+    required: true
+    prompt: "What is the name of the new package?"
+    default: ""
+
+  description:
+    type: "string"
+    required: true
+    prompt: "Enter a brief description of what the new package is and/or the reason for the new package."
+    default: ""
+
+  version:
+    type: "string"
+    required: true
+    prompt: "What version will the new package have?"
+    default: ""

@@ -1,0 +1,54 @@
+# https://moonrepo.dev/docs/config/workspace
+$schema: "https://moonrepo.dev/schemas/workspace.json"
+
+projects:
+  core: "packages/core"
+
+node:
+  version: "18.10.0"
+
+  packageManager: "pnpm"
+
+  pnpm:
+    version: "7.12.1"
+
+  addEnginesConstraint: true
+
+  dedupeOnLockfileChange: true
+
+  dependencyVersionFormat: "workspace"
+
+  syncProjectWorkspaceDependencies: true
+
+  inferTasksFromScripts: false
+
+  # Use the `package.json` name as an alias for the respective moon project.
+  # aliasPackageNames: 'name-and-scope'
+
+  # Sync `node.version` to a 3rd-party version manager's config file.
+  # Accepts "nodenv" (.node-version), "nvm" (.nvmrc), or none.
+  # syncVersionManagerConfig: 'nvm'
+
+typescript:
+  createMissingConfig: true
+
+  projectConfigFileName: "tsconfig.json"
+
+  rootConfigFileName: "tsconfig.base.json"
+
+  rootOptionsConfigFileName: "tsconfig.base.json"
+
+  # Update the project's `tsconfig.json` to route the `outDir` to moon's cache.
+  # routeOutDirToCache: true
+
+  syncProjectReferences: true
+
+  syncProjectReferencesToPaths: true
+
+vcs:
+  manager: "git"
+  defaultBranch: "main"
+
+generator:
+  template:
+    - "./templates"

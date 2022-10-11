@@ -7,12 +7,17 @@
 	"author": "@kaname-png",
 	"license": "MIT",
 	"scripts": {
-		"lint": "eslint",
-		"prettier": "prettier --write packages/**/*.{tsx,ts,css} --no-error-on-unmatched-pattern",
-		"update:i": "pnpm up --interactive",
-		"update:f": "pnpm up --latest",
+		"build": "moon run :build",
+		"clean": "moon clean && rimraf \"packages/**/dist\"",
+		"generate": "moon generate",
 		"commit": "git-cz",
-		"prepare": "husky install .husky"
+		"format": "prettier --write packages/**/*.{tsx,ts,css} --no-error-on-unmatched-pattern",
+		"lint": "moon run :lint",
+		"moon": "moon",
+		"prepare": "husky install .husky",
+		"prettier": "moon run :prettier",
+		"update:f": "pnpm up --latest",
+		"update:i": "pnpm up --interactive"
 	},
 	"keywords": [
 		"discord",
@@ -24,6 +29,7 @@
 		"@commitlint/cli": "^17.1.2",
 		"@commitlint/config-conventional": "^17.1.0",
 		"@commitlint/format": "^17.0.0",
+		"@moonrepo/cli": "^0.16.1",
 		"@sapphire/eslint-config": "^4.3.8",
 		"@sapphire/ts-config": "^3.3.4",
 		"@types/node": "^18.8.4",
@@ -35,7 +41,12 @@
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
 		"pretty-quick": "^3.1.3",
+		"rimraf": "^3.0.2",
 		"tslib": "^2.4.0",
 		"typescript": "^4.8.4"
-	}
+	},
+	"engines": {
+		"node": "18.10.0"
+	},
+	"packageManager": "pnpm@7.12.1"
 }
