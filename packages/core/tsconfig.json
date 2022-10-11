@@ -1,12 +1,25 @@
 {
   "extends": "../../tsconfig.base.json",
   "include": [
-    "**/*"
+    "src"
   ],
-  "references": [],
+  "references": [
+    {
+      "path": "../structures"
+    }
+  ],
   "compilerOptions": {
     "outDir": "dts",
     "declaration": true,
-    "declarationDir": "dts"
+    "declarationDir": "dts",
+    "rootDir": "src",
+    "paths": {
+      "@adashino/structures": [
+        "../structures/src/index.ts"
+      ],
+      "@adashino/structures/*": [
+        "../structures/src/*"
+      ]
+    }
   }
 }

@@ -1,12 +1,12 @@
 {
-  "name": "@adashino/core",
+  "name": "@adashino/structures",
   "version": "1.0.0",
-  "description": "Core for running the framework to create bots for discorc with @biscuitland/core.Core for running the framework to create bots for discorc with @biscuitland/core.",
+  "description": "Structure manager used internally in @adashino/core",
   "main": "./lib/index.js",
   "author": "@kaname-png",
   "license": "MIT",
   "private": true,
-  "repository": "https://github.com/kaname-png/adashino/tree/main/packages/core",
+  "repository": "https://github.com/kaname-png/adashino/tree/main/packages/@adashino/structures",
   "homepage": "https://github.com/kaname-png/adashino",
   "keywords": [
     "framework",
@@ -31,8 +31,5 @@
     "lib/**/*.{js,map}",
     "src/**/*.{ts,tsx,json}"
   ],
-  "dependencies": {
-    "@adashino/structures": "workspace:^"
-  },
   "types": "./dts/index.d.ts"
 }

@@ -28,11 +28,18 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "composite": true
   },
   "references": [
     {
       "path": "packages/core"
+    },
+    {
+      "path": "packages/structures"
     }
+  ],
+  "exclude": [
+    "packages/**/lib/**"
   ]
 }

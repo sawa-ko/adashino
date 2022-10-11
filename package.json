@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "moon run :build --dependents",
-    "clean": "moon clean && rimraf \"packages/**/dist\"",
+    "clean": "moon clean && packemon clean & rimraf \"packages/**/{lib,dts}\"",
     "commit": "git-cz",
     "format": "prettier --write packages/**/*.{tsx,ts,css} --no-error-on-unmatched-pattern",
     "generate": "moon generate",

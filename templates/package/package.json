@@ -3,7 +3,7 @@
 	"version": "{{ version }}",
 	"description": "{{ description }}",
 	"main": "./lib/index.js",
-	"types": "./dts/index.d.ts",
+	"types": "./dts/src/index.d.ts",
 	"author": "@kaname-png",
 	"license": "MIT",
 	"type": "module",

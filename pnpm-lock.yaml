@@ -45,6 +45,12 @@ importers:
       typescript: 4.8.4
 
   packages/core:
+    specifiers:
+      '@adashino/structures': workspace:^
+    dependencies:
+      '@adashino/structures': link:../structures
+
+  packages/structures:
     specifiers: {}
 
 packages:

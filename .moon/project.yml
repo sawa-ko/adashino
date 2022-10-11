@@ -17,7 +17,7 @@ tasks:
 
     args:
       - --no-error-on-unmatched-pattern
-      - "."
+      - "src"
 
     deps: []
 
@@ -35,7 +35,7 @@ tasks:
 
     args:
       - --check
-      - "."
+      - "src"
 
     deps:
       - ^:lint
