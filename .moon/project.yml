@@ -2,11 +2,13 @@
 $schema: "https://moonrepo.dev/schemas/global-project.json"
 
 fileGroups:
+  configs:
+    - "*.{js,json}"
   sources:
-    - src/**/*
-    - tsconfig.json
-    - /tsconfig.*.json
-    - /tsconfig.json"
+    - "src/**/*"
+    - "types/**/*"
+  tests:
+    - "tests/**/*"
 
 tasks:
   lint:
