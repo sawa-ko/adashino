@@ -1,0 +1,17 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "author": "@kaname-png",
+  "license": "MIT",
+  "keywords": [
+    "framework",
+    "biscuitland",
+    "discord",
+    "bot"
+  ],
+  "dependencies": {
+    "@biscuitland/core": "^2.1.0"
+  }
+}

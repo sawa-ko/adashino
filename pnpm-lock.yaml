@@ -1,0 +1,79 @@
+lockfileVersion: 5.4
+
+importers:
+
+  .:
+    specifiers:
+      tslib: ^2.4.0
+      typescript: ^4.8.4
+    devDependencies:
+      tslib: 2.4.0
+      typescript: 4.8.4
+
+  packages/core:
+    specifiers:
+      '@biscuitland/core': ^2.1.0
+    dependencies:
+      '@biscuitland/core': 2.1.0
+
+packages:
+
+  /@biscuitland/api-types/2.1.0:
+    resolution: {integrity: sha512-wGgOU1hJejhckP6ywlp1BviKdZV0UIhvDiSx4zoLdLuGXxALNPcc15mYTjMUPIXqCTWSjzwniWSlPrK+FztLuQ==}
+    dev: false
+
+  /@biscuitland/core/2.1.0:
+    resolution: {integrity: sha512-bjum/tsrqNS2h9HE5Mr9bxVxlV9TT95rEUwyzbl8fi8vIp5TFw0zy9fkeXUHDI/1h1DOljtg4M0O+e4wrwdOPw==}
+    dependencies:
+      '@biscuitland/api-types': 2.1.0
+      '@biscuitland/rest': 2.1.0
+      '@biscuitland/ws': 2.1.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
+
+  /@biscuitland/rest/2.1.0:
+    resolution: {integrity: sha512-l1syq8fCegpf2NysdlJctIGSUNxTtxhaVaUoU76JDAwV5/N3yBwjf3AWuxj2R0gJg8cJBp7gSw1uDdEu9zOY6w==}
+    dependencies:
+      '@biscuitland/api-types': 2.1.0
+    dev: false
+
+  /@biscuitland/ws/2.1.0:
+    resolution: {integrity: sha512-FqHskgg0c5JjRuXQGDTz2JbC+8Ss6xBPrg4mnA/GULpv1Iowi5nUM5+jQ2ucNZ3koXX/8Xc7EbrbJ0uEtCvGOg==}
+    dependencies:
+      '@biscuitland/api-types': 2.1.0
+      '@sapphire/async-queue': 1.5.0
+      ws: 8.9.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
+
+  /@sapphire/async-queue/1.5.0:
+    resolution: {integrity: sha512-JkLdIsP8fPAdh9ZZjrbHWR/+mZj0wvKS5ICibcLrRI1j84UmLMshx5n9QmL8b95d4onJ2xxiyugTgSAX7AalmA==}
+    engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
+    dev: false
+
+  /tslib/2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+    dev: true
+
+  /typescript/4.8.4:
+    resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
+  /ws/8.9.0:
+    resolution: {integrity: sha512-Ja7nszREasGaYUYCI2k4lCKIRTt+y7XuqVoHR44YpI49TtryyqbqvDMn5eqfW7e6HzTukDRIsXqzVHScqRcafg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: false

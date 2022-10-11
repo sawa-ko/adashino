@@ -1,0 +1,18 @@
+{
+  "name": "main",
+  "description": "A @biscuitland/core framework?",
+  "type": "module",
+  "private": true,
+  "sideEffects": false,
+  "author": "@kaname-png",
+  "license": "MIT",
+  "keywords": [
+    "discord",
+    "biscuit",
+    "framework discord"
+  ],
+  "devDependencies": {
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  }
+}
