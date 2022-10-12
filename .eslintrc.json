@@ -1,3 +1,4 @@
 {
-	"extends": "@sapphire"
+	"extends": "@sapphire",
+	"ignorePatterns": ["**/lib/**/*", "**/mjs/**/*", "**/dts/**/*"]
 }

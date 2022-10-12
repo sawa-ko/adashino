@@ -2,10 +2,12 @@
   "name": "@adashino/structures",
   "version": "1.0.0",
   "description": "Structure manager used internally in @adashino/core",
-  "main": "./lib/index.js",
+  "main": "./mjs/index.mjs",
+  "types": "./dts/index.d.ts",
   "author": "@kaname-png",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "repository": "https://github.com/kaname-png/adashino/tree/main/packages/@adashino/structures",
   "homepage": "https://github.com/kaname-png/adashino",
   "keywords": [
@@ -14,11 +16,18 @@
     "discord",
     "bot"
   ],
-  "packemon": {
-    "format": "lib",
-    "platform": "node",
-    "support": "experimental"
-  },
+  "packemon": [
+    {
+      "format": "lib",
+      "platform": "node",
+      "support": "experimental"
+    },
+    {
+      "format": "mjs",
+      "platform": "node",
+      "support": "experimental"
+    }
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -27,9 +36,15 @@
     "npm": ">=8.5.0"
   },
   "files": [
+    "cjs/**/*.{cjs,mjs,map}",
     "dts/**/*.d.ts",
     "lib/**/*.{js,map}",
+    "mjs/**/*.{mjs,map}",
     "src/**/*.{ts,tsx,json}"
   ],
-  "types": "./dts/index.d.ts"
+  "exports": {
+    "import": "./mjs/index.mjs",
+    "require": "./lib/index.js",
+    "types": "./dts/index.d.ts"
+  }
 }

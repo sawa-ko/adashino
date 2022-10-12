@@ -6,6 +6,9 @@ node_modules
 .moon/docker
 
 # Builds
-**/dist
 **/dts
 **/lib
+**/mjs
+
+# Typescript
+tsconfig.tsbuildinfo

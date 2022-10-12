@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
     "disableReferencedProjectLoad": true,
-    "target": "ES2022",
-    "lib": [
-      "ESNext"
-    ],
+    "target": "ESNext",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "module": "ES2022",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "declaration": true,
     "declarationMap": true,

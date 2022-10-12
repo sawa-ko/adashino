@@ -2,10 +2,12 @@
   "name": "@adashino/core",
   "version": "1.0.0",
   "description": "Core for running the framework to create bots for discorc with @biscuitland/core.Core for running the framework to create bots for discorc with @biscuitland/core.",
-  "main": "./lib/index.js",
+  "main": "./mjs/index.mjs",
+  "types": "./dts/index.d.ts",
   "author": "@kaname-png",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "repository": "https://github.com/kaname-png/adashino/tree/main/packages/core",
   "homepage": "https://github.com/kaname-png/adashino",
   "keywords": [
@@ -14,11 +16,18 @@
     "discord",
     "bot"
   ],
-  "packemon": {
-    "format": "lib",
-    "platform": "node",
-    "support": "experimental"
-  },
+  "packemon": [
+    {
+      "format": "lib",
+      "platform": "node",
+      "support": "experimental"
+    },
+    {
+      "format": "mjs",
+      "platform": "node",
+      "support": "experimental"
+    }
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -27,12 +36,18 @@
     "npm": ">=8.5.0"
   },
   "files": [
+    "cjs/**/*.{cjs,mjs,map}",
     "dts/**/*.d.ts",
     "lib/**/*.{js,map}",
+    "mjs/**/*.{mjs,map}",
     "src/**/*.{ts,tsx,json}"
   ],
   "dependencies": {
     "@adashino/structures": "workspace:^"
   },
-  "types": "./dts/index.d.ts"
+  "exports": {
+    "import": "./mjs/index.mjs",
+    "require": "./lib/index.js",
+    "types": "./dts/index.d.ts"
+  }
 }
