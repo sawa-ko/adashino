@@ -11,7 +11,7 @@
     "clean": "moon clean && packemon clean & rimraf \"packages/**/{lib,dts}\"",
     "commit": "git-cz",
     "format": "prettier --write packages/**/*.{tsx,ts,css} --no-error-on-unmatched-pattern",
-    "generate": "moon generate",
+    "generate": "moon generate package",
     "lint": "moon run :lint --dependents",
     "moon": "moon",
     "prepare": "husky install .husky",
