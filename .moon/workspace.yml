@@ -3,7 +3,7 @@ $schema: "https://moonrepo.dev/schemas/workspace.json"
 
 projects:
   core: "packages/core"
-  structures: "packages/structures"
+  agents: "packages/agents"
 
 node:
   version: "18.10.0"

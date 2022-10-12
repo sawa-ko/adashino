@@ -1,4 +1,7 @@
 {
 	"extends": "@sapphire",
-	"ignorePatterns": ["**/lib/**/*", "**/mjs/**/*", "**/dts/**/*"]
+	"ignorePatterns": ["**/lib/**/*", "**/mjs/**/*", "**/dts/**/*"],
+	"rules": {
+		"@typescript-eslint/no-throw-literal": "off"
+	}
 }
