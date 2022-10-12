@@ -16,11 +16,18 @@
 		"discord",
 		"bot"
 	],
-	"packemon": {
-		"format": "lib",
-		"platform": "node",
-		"support": "experimental"
-	},
+	"packemon": [
+		{
+			"format": "lib",
+			"platform": "node",
+			"support": "experimental"
+		},
+		{
+			"format": "mjs",
+			"platform": "node",
+			"support": "experimental"
+		}
+	],
 	"publishConfig": {
 		"access": "public"
 	},
@@ -32,5 +39,10 @@
 		"dts/**/*.d.ts",
 		"lib/**/*.{js,map}",
 		"src/**/*.{ts,tsx,json}"
-	]
+	],
+	"exports": {
+		"import": "./mjs/index.mjs",
+		"require": "./lib/index.js",
+		"types": "./dts/index.d.ts"
+	}
 }
